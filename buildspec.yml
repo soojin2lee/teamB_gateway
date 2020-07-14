@@ -38,7 +38,7 @@ phases:
       - kubectl config set-credentials admin --token="$KUBE_TOKEN"
       - kubectl config set-context default --cluster=k8s --user=admin
       - kubectl config use-context default      
-      - kubectl expose deploy teamb-payment --type=LoadBalancer --port=8080
+      
 cache:
   paths:
     - '/root/.m2/**/*'
