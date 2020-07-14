@@ -1,0 +1,82 @@
+server:
+  port: 8088
+
+---
+
+spring:
+  profiles: default
+  cloud:
+    gateway:
+      routes:
+        - id: bookmanagement
+          uri: http://localhost:8081
+          predicates:
+            - Path=/bookManagements/** 
+        - id: user
+          uri: http://localhost:8082
+          predicates:
+            - Path=/users/** 
+        - id: bookrentalsystem
+          uri: http://localhost:8083
+          predicates:
+            - Path=/bookRentalSystems/** 
+        - id: payment
+          uri: http://localhost:8084
+          predicates:
+            - Path=/payments/** 
+        - id: view
+          uri: http://localhost:8085
+          predicates:
+            - Path= 
+      globalcors:
+        corsConfigurations:
+          '[/**]':
+            allowedOrigins:
+              - "*"
+            allowedMethods:
+              - "*"
+            allowedHeaders:
+              - "*"
+            allowCredentials: true
+
+
+---
+
+spring:
+  profiles: docker
+  cloud:
+    gateway:
+      routes:
+        - id: bookmanagement
+          uri: http://bookmanagement:8080
+          predicates:
+            - Path=/bookManagements/** 
+        - id: user
+          uri: http://user:8080
+          predicates:
+            - Path=/users/** 
+        - id: bookrentalsystem
+          uri: http://bookrentalsystem:8080
+          predicates:
+            - Path=/bookRentalSystems/** 
+        - id: payment
+          uri: http://payment:8080
+          predicates:
+            - Path=/payments/** 
+        - id: view
+          uri: http://view:8080
+          predicates:
+            - Path= 
+      globalcors:
+        corsConfigurations:
+          '[/**]':
+            allowedOrigins:
+              - "*"
+            allowedMethods:
+              - "*"
+            allowedHeaders:
+              - "*"
+            allowCredentials: true
+
+server:
+  port: 8080
