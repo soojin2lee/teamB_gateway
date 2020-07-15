@@ -58,7 +58,7 @@ spring:
         - id: bookrentalsystem
           uri: http://teamb-bookrental:8080
           predicates:
-            - Path=/bookRentalSystems/** 
+            - Path=/bookRentalSystems/** /rentalapi/**
         - id: payment
           uri: http://teamb-payment:8080
           predicates:
