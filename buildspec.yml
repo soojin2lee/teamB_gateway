@@ -2,7 +2,7 @@ version: 0.2
 
 env:
   variables:
-    _PROJECT_NAME: "teamb-gateway"
+    _PROJECT_NAME: "admin04-gateway"
 
 phases:
   install:
