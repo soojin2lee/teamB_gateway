@@ -48,23 +48,23 @@ spring:
     gateway:
       routes:
         - id: bookmanagement
-          uri: http://bookmanagement:8080
+          uri: http://teamb-bookmanagement:8080
           predicates:
             - Path=/bookManagements/** 
         - id: user
-          uri: http://user:8080
+          uri: http://teamb-user:8080
           predicates:
             - Path=/users/** 
         - id: bookrentalsystem
-          uri: http://bookrentalsystem:8080
+          uri: http://teamb-bookrentalsystem:8080
           predicates:
             - Path=/bookRentalSystems/** 
         - id: payment
-          uri: http://payment:8080
+          uri: http://teamb-payment:8080
           predicates:
             - Path=/payments/** 
         - id: view
-          uri: http://view:8080
+          uri: http://teamb-view:8080
           predicates:
             - Path= 
       globalcors:
