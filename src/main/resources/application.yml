@@ -25,9 +25,9 @@ spring:
           predicates:
             - Path=/payments/**
         - id: point
-            uri: http://localhost:8086
-            predicates:
-              - Path=/points/**
+          uri: http://localhost:8086
+          predicates:
+            - Path=/points/**
         - id: view
           uri: http://localhost:8085
           predicates:
