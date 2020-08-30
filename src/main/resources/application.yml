@@ -52,11 +52,11 @@ spring:
     gateway:
       routes:
         - id: bookmanagement
-          uri: http://admin04-bookmanagement:8080
+          uri: http://bookmanagement:8080
           predicates:
             - Path=/bookManagements/** 
         - id: user
-          uri: http://admin04-user:8080
+          uri: http://user:8080
           predicates:
             - Path=/users/** 
         - id: bookrentalsystem
@@ -68,11 +68,11 @@ spring:
           predicates:
             - Path=/payments/**
         - id: point
-          uri: http://admin04-point:8080
+          uri: http://point:8080
           predicates:
             - Path=/points/**
         - id: view
-          uri: http://admin04-view:8080
+          uri: http://view:8080
           predicates:
             - Path=/views/** 
       globalcors:
