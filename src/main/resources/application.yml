@@ -60,7 +60,7 @@ spring:
           predicates:
             - Path=/users/** 
         - id: bookrentalsystem
-          uri: http://bookrental:8080
+          uri: http://bookrentalsystem:8080
           predicates:
             - Path=/bookrentalsystems/**, /bookListStatuses/**
         - id: payment
