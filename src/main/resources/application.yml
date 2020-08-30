@@ -62,7 +62,7 @@ spring:
         - id: bookrentalsystem
           uri: http://bookrental:8080
           predicates:
-            - Path=/bookRentalSystems/**, /bookListStatuses/**
+            - Path=/bookrentalsystems/**, /bookListStatuses/**
         - id: payment
           uri: http://payment:8080
           predicates:
@@ -79,7 +79,7 @@ spring:
         corsConfigurations:
           '[/**]':
             allowedOrigins:
-              - "*"
+              - "*" 
             allowedMethods:
               - "*"
             allowedHeaders:
